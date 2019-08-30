@@ -2,6 +2,8 @@
 
 echo "Installing Python dependencies..."
 
+if ! dpkg-query -W -f='${Status}' xvfb | grep "ok installed"; then sudo apt install xvfb; fi
+
 pillow="$(python3 -c 'import pkgutil; print(1 if pkgutil.find_loader("Pillow") else 0)')"
 wordcloud="$(python3 -c 'import pkgutil; print(1 if pkgutil.find_loader("wordcloud") else 0)')"
 matplotlib="$(python3 -c 'import pkgutil; print(1 if pkgutil.find_loader("matplotlib") else 0)')"
