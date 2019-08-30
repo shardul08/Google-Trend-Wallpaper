@@ -1,0 +1,10 @@
+{
+    "resolution": {
+        "height": 768,
+        "width": 1366
+    },
+    "wordcloud": {
+        "background": "#101010",
+        "margin": 20
+    }
+}
