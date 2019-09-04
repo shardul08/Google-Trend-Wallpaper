@@ -9,7 +9,8 @@ display = Display(visible=0, size=(1400, 1000))
 display.start()
 
 browser = webdriver.Firefox()
-browser.get('https://trends.google.com/trends/trendingsearches/daily?geo=US')
+country = "US" #set the country here
+browser.get(f'https://trends.google.com/trends/trendingsearches/daily?geo={country}')
 
 browser.implicitly_wait(10)
 
