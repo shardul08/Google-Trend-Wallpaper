@@ -10,11 +10,12 @@ display.start()
 
 browser = webdriver.Firefox()
 country = "US" #set the country here
+days = 14      #number of days
 browser.get(f'https://trends.google.com/trends/trendingsearches/daily?geo={country}')
 
 browser.implicitly_wait(10)
 
-for i in range(1,15):
+for i in range(1,days+1):
     if i == 1:
         k = 1
     else:
@@ -25,7 +26,7 @@ for i in range(1,15):
 trending_list = []
 trending_dict = {}
 
-for i in range (1,15):
+for i in range (1,days+1):
     list_div = browser.find_element_by_xpath("/html/body/div[2]/div[2]/div/div[2]/div/div[1]/ng-include/div/div/div/div[{}]".format(i))
     details_divs = list_div.find_elements_by_class_name("details")
 
