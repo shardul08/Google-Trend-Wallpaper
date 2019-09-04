@@ -1,2 +1,6 @@
+#Ignore these files
 *.log
 *.png
+
+#Do not ignore
+!screenshot.png
