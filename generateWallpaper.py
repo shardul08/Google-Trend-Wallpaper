@@ -10,7 +10,7 @@ display.start()
 
 browser = webdriver.Firefox()
 country = "US" #set the country here
-days = 14      #number of days
+days = 10      #number of days
 browser.get(f'https://trends.google.com/trends/trendingsearches/daily?geo={country}')
 
 browser.implicitly_wait(10)
