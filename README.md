@@ -41,3 +41,15 @@ You can set your region/country to get the trending searches in `line #12` of [`
 You can set the number of days for which you want the trending searches in `line #13` of [`generateWallpaper.py`](https://github.com/shardul08/Google-Trend-Wallpaper/blob/master/generateWallpaper.py)
 
 **NOTE** If the wallpaper is not set automatically, you can set `wallpaper.png` as the wallpaper manually.
+
+If you want the wallpaper to refresh/update every hour, you can add a cron job to run the script every hour.
+
+To add a cron job, run
+
+`crontab -e`
+
+append the following
+
+`0 * * * * cd path/to/script/directory && ./updateWallpaper.sh > /tmp/esllpsper.log > 2>&1`
+
+This will refresh the wallpaper every hour. You can customize this command to refresh the wallpaper as often you want.
