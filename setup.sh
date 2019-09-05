@@ -23,11 +23,11 @@ pip3 install --user matplotlib
 fi
 if [ $selenium == 0 ]; then
 echo "Installing selenium..."
-pip3 install --user matplotlib
+pip3 install --user selenium
 fi
 if [ $pyvirtualdisplay == 0 ]; then
 echo "Installing pyvirtualdisplay..."
-pip3 install --user matplotlib
+pip3 install --user pyvirtualdisplay
 fi
 
 sh updateWallpaper.sh
