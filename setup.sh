@@ -27,7 +27,7 @@ pip3 install --user matplotlib
 fi
 if [ $pyvirtualdisplay == 0 ]; then
 echo "Installing pyvirtualdisplay..."
-pip3 install --user matplotlib
+pip3 install --user pyvirtualdisplay
 fi
 
 sh updateWallpaper.sh
