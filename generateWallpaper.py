@@ -4,11 +4,17 @@ from PIL import Image
 from wordcloud import WordCloud
 import json
 import os
+import sys
 
 display = Display(visible=0, size=(1400, 1000))
 display.start()
 
-browser = webdriver.Firefox()
+try:
+    browser = webdriver.Firefox()
+except:
+    print("Error: Install geckodriver, and make sure it's in your PATH")
+    sys.exit(-1)
+
 country = "US" #set the country here
 days = 10      #number of days
 browser.get(f'https://trends.google.com/trends/trendingsearches/daily?geo={country}')

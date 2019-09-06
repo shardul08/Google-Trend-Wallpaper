@@ -3,4 +3,9 @@
 echo "Creating wallpaper..."
 
 nice python3 generateWallpaper.py
-sh setWallpaper.sh
+retVal=$?
+if [ $retVal -eq 0 ]; then
+    sh setWallpaper.sh
+else
+    echo "Something went wrong"
+fi
