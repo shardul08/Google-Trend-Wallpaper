@@ -50,6 +50,6 @@ To add a cron job, run
 
 append the following
 
-`0 * * * * cd path/to/script/directory && ./updateWallpaper.sh > /tmp/esllpsper.log > 2>&1`
+`0 * * * * cd path/to/script/directory && ./updateWallpaper.sh > /tmp/wallpaper.log > 2>&1`
 
 This will refresh the wallpaper every hour. You can customize this command to refresh the wallpaper as often you want.
