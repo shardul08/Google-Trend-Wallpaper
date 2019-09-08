@@ -12,11 +12,23 @@ display.start()
 try:
     browser = webdriver.Firefox()
 except:
-    print("Error: Install geckodriver, and make sure it's in your PATH")
+    print("ERROR: Install geckodriver, and make sure it's in your PATH")
     sys.exit(-1)
 
-country = "US" #set the country here
-days = 10      #number of days
+country_codes = {'Argentina': 'AR', 'Australia': 'AU', 'Austria': 'AT', 'Belgium': 'BE', 
+                 'Brazil': 'BR', 'Canada': 'CA', 'Chile': 'CL', 'Colombia': 'CO', 'Czechia': 'CZ', 
+                 'Denmark': 'DK', 'Egypt': 'EG', 'Finland': 'FI', 'France': 'FR', 'Germany': 'DE', 
+                 'Greece': 'GR', 'Hong Kong': 'HK', 'Hungary': 'HU', 'India': 'IN', 'Indonesia': 'ID', 
+                 'Ireland': 'IE', 'Israel': 'IL', 'Italy': 'IT', 'Japan': 'JP', 'Kenya': 'KE', 
+                 'Malaysia': 'MY', 'Mexico': 'MX', 'Netherlands': 'NL', 'New Zealand': 'NZ', 
+                 'Nigeria': 'NG', 'Norway': 'NO', 'Philippines': 'PH', 'Poland': 'PL', 'Portugal': 'PT', 
+                 'Romania': 'RO', 'Russia': 'RU', 'Saudi Arabia': 'SA', 'Singapore': 'SG', 
+                 'South Africa': 'ZA', 'South Korea': 'KR', 'Sweden': 'SE', 'Switzerland': 'CH', 
+                 'Taiwan': 'TW', 'Thailand': 'TH', 'Turkey': 'TR', 'Ukraine': 'UA', 'United Kingdom': 'GB', 
+                 'United States': 'US', 'Vietnam': 'VN'}
+
+country = "IN" #Set the country code from the above dictionary
+days = 10      #Number of days
 browser.get(f'https://trends.google.com/trends/trendingsearches/daily?geo={country}')
 
 browser.implicitly_wait(10)
@@ -26,8 +38,15 @@ for i in range(1,days+1):
         k = 1
     else:
         k = 2
-    link_div = browser.find_element_by_xpath("/html/body/div[2]/div[2]/div/div[2]/div/div[{}]".format(k))
-    link_div.click()
+    try:
+        link_div = browser.find_element_by_xpath("/html/body/div[2]/div[2]/div/div[2]/div/div[{}]".format(k))
+        link_div.click()
+    except:
+        print("\nERROR: Please check if the country code entered is correct.\n")
+        for country, code in country_codes.items():
+            print(country + " : " + code)
+        print("NOTE: If you do not see your country in the above list, it means daily search trend data is not available for your country in https://trends.google.com/trends/trendingsearches/daily?geo=AR")
+        sys.exit(-1)
 
 trending_list = []
 trending_dict = {}

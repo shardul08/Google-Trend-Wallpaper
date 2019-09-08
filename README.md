@@ -36,9 +36,9 @@ This will install all the required dependencies and set the wallpaper.
 ## Usage
 Run `./updateWallpaper.sh` to update the wallpaper to the wordcloud of the latest trends.
 
-You can set your region/country to get the trending searches in `line #12` of [`generateWallpaper.py`](https://github.com/shardul08/Google-Trend-Wallpaper/blob/master/generateWallpaper.py)
+You can set your region/country to get the trending searches in `line #30` of [`generateWallpaper.py`](https://github.com/shardul08/Google-Trend-Wallpaper/blob/master/generateWallpaper.py)
 
-You can set the number of days for which you want the trending searches in `line #13` of [`generateWallpaper.py`](https://github.com/shardul08/Google-Trend-Wallpaper/blob/master/generateWallpaper.py)
+You can set the number of days for which you want the trending searches in `line #31` of [`generateWallpaper.py`](https://github.com/shardul08/Google-Trend-Wallpaper/blob/master/generateWallpaper.py)
 
 **NOTE** If the wallpaper is not set automatically, you can set `wallpaper.png` as the wallpaper manually.
 

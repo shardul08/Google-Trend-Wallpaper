@@ -30,7 +30,6 @@ echo "Installing pyvirtualdisplay..."
 pip3 install --user pyvirtualdisplay
 fi
 
-sh updateWallpaper.sh
-
 echo "Setup successfully completed"
-echo "If something went wrong, raise an issue at https://github.com/shardul08/Google-Trend-Wallpaper/issues"
+
+sh updateWallpaper.sh
