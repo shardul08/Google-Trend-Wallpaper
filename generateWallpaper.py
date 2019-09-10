@@ -12,7 +12,7 @@ display.start()
 try:
     browser = webdriver.Firefox()
 except:
-    print("ERROR: Install geckodriver, and make sure it's in your PATH")
+    print("ERROR: Install geckodriver, and make sure it's in your PATH. Install the latest version of firefox web browser.")
     sys.exit(-1)
 
 country_codes = {'Argentina': 'AR', 'Australia': 'AU', 'Austria': 'AT', 'Belgium': 'BE', 
