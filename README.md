@@ -10,6 +10,7 @@ This project is inspired from [process-wallpaper](https://github.com/anirudhajit
 * `python3`
 * `gsettings` or `feh`  To set the generated wordcloud as the wallpaper
 * `xvfb`  To simulate a display and run everything in memory
+* `firefox` web browser
 ### Python dependencies
 * `selenium`  To scrape the data from [Google trends](https://trends.google.com/trends/trendingsearches/daily?geo=IN)
 * `pyvirtualdisplay` Python wrapper for `xvfb`
