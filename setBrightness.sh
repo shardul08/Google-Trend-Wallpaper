@@ -5,7 +5,7 @@ echo "Setting wallpaper brightness..."
 
 WALLPAPER_PATH="$(pwd)/wallpaper.png"
 
-nice python adjustWallpaper.py $TYPE $LEVEL $WALLPAPER_PATH
+nice python3 adjustWallpaper.py $TYPE $LEVEL $WALLPAPER_PATH
 retVal=$?
 
 if [ $retVal -eq 0 ]; then

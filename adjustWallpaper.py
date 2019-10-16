@@ -2,7 +2,6 @@ import sys
 from PIL import Image, ImageEnhance
 
 argumentList = sys.argv
-print(argumentList)
 
 adjust_type = sys.argv[1]
 try:
