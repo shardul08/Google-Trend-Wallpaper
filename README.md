@@ -74,3 +74,10 @@ append the following
 
 This will refresh the wallpaper every hour. You can customize this command to refresh the wallpaper as often you want.
 
+If you want adjust the brightness of the wallpaper you can use the dim or brighten commands:
+
+```bash
+./setBrightness.sh dim|brighten XX
+```
+
+Where XX is the percentage you would like to dim or brighten the image. For example `./setBrightness.sh dim 20` would dim the current wallpaper by 20% and then set the new image as your background. Again you can set wallpaper.png manually if it fails to do it automatically.
