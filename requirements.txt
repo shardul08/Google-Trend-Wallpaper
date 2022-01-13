@@ -4,10 +4,19 @@
 #
 #    pip-compile
 #
-easyprocess==0.2.7        # via pyvirtualdisplay
-numpy==1.17.2             # via wordcloud
-pillow==6.1.0
+easyprocess==0.2.7
+    # via pyvirtualdisplay
+numpy==1.17.2
+    # via wordcloud
+pillow==9.0.0
+    # via
+    #   -r requirements.in
+    #   wordcloud
 pyvirtualdisplay==0.2.4
+    # via -r requirements.in
 selenium==3.141.0
-urllib3==1.25.3           # via selenium
+    # via -r requirements.in
+urllib3==1.25.3
+    # via selenium
 wordcloud==1.5.0
+    # via -r requirements.in
